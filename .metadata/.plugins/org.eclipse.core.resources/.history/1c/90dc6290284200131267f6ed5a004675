@@ -1,0 +1,22 @@
+/*
+ * Main.h
+ *
+ *  Created on: Sep 28, 2009
+ *      Author: fgervais
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+class Leds {
+public:
+	Leds();
+	virtual ~Leds();
+	void Toggle();
+	void Off();
+	void On();
+};
+
+
+extern void SysTick_Handler();
+#endif /* MAIN_H_ */

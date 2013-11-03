@@ -1,0 +1,84 @@
+/*
+ * Main.cpp
+ *
+ *  Created on: Sep 28, 2009
+ *      Author: Lubos Melichar
+ */
+
+#include <stddef.h>
+#include "stm32f10x.h"
+#include "STM32vldiscovery.h"
+#include "Main.h"
+
+
+Leds::Leds() {
+	STM32vldiscovery_LEDInit(LED3);
+	STM32vldiscovery_LEDInit(LED4);
+	On();
+}
+Leds::~Leds() {}
+void Leds::Toggle() {
+	STM32vldiscovery_LEDToggle(LED3);
+	STM32vldiscovery_LEDToggle(LED4);
+}
+void Leds::Off() {
+	STM32vldiscovery_LEDOff(LED3);
+	STM32vldiscovery_LEDOff(LED4);
+}
+void Leds::On() {
+	STM32vldiscovery_LEDOn(LED3);
+	STM32vldiscovery_LEDOn(LED4);
+}
+
+void SysTick_Handler(){
+	static u8 cnt = 0;
+	cnt++;
+	if(cnt == 100){
+		STM32vldiscovery_LEDOff(LED3);
+		STM32vldiscovery_LEDOff(LED4);
+	}
+
+}
+
+/**
+  * @brief  Configures the SysTick to generate an interrupt each 1 millisecond.
+  * @param  None
+  * @retval None
+  */
+void SysTick_Configuration(void)
+{
+  NVIC_EnableIRQ(SysTick_IRQn);
+
+  /* Setup SysTick Timer for 1 msec interrupts  */
+  if (SysTick_Config(SystemCoreClock / 1000))
+  {
+    /* Capture error */
+    while (1);
+  }
+  /* Set SysTick Priority to 1 */
+  NVIC_SetPriority(SysTick_IRQn, 0x0C);
+}
+
+int main() {
+	Leds leds;
+
+
+	STM32vldiscovery_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);
+
+	SysTick_Configuration();
+
+	/* Infinite loop */
+	while (1){
+
+		if(0 == STM32vldiscovery_PBGetState(BUTTON_USER))
+		{
+			leds.On();
+		}
+		else
+		{
+			leds.Off();
+		}
+	}
+}
+
+

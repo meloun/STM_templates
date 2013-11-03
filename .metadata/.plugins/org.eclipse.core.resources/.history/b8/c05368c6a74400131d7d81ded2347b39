@@ -1,0 +1,141 @@
+# Hey Emacs, this is a -*- makefile -*-
+
+#export PATH := "C:\_meloun\myStm32\toolchains\CodeSour-cery\bin;"
+#export PATH := "C:\_meloun\myStm32\toolchains\yagarto-20121222\bin;"
+export PATH := "C:\_meloun\myStm32\toolchains\GNU Tools ARM Embedded\4.7 2013q2\bin\;"
+#export PATH := "D:\Private\myStm32\toolchains\GNU Tools ARM Embedded\4.7 2013q2\bin\;"
+
+# Target path:
+TARGET_PATH = Build
+
+# List of names of assembler files:
+#A_SRCS := $(wildcard *.s)
+A_SRCS := $(wildcard */*/*/*/*/*/*/*.s) \
+	$(wildcard */*/*/*/*/*/*.s) \
+	$(wildcard */*/*/*/*/*.s) \
+	$(wildcard */*/*/*/*.s) \
+	$(wildcard */*/*/*.s) \
+	$(wildcard */*/*.s) \
+	$(wildcard */*.s) \
+	$(wildcard *.s)
+# List of names of C files:
+#C_SRCS := $(wildcard *.c)
+C_SRCS := $(wildcard */*/*/*/*/*/*/*.c) \
+	$(wildcard */*/*/*/*/*/*.c) \
+	$(wildcard */*/*/*/*/*.c) \
+	$(wildcard */*/*/*/*.c) \
+	$(wildcard */*/*/*.c) \
+	$(wildcard */*/*.c) \
+	$(wildcard */*.c) \
+	$(wildcard *.c)
+# List of names of C++ files:
+#CPP_SRCS := $(wildcard *.cpp)
+CPP_SRCS := $(wildcard */*/*/*/*/*/*/*.cpp) \
+	$(wildcard */*/*/*/*/*/*.cpp) \
+	$(wildcard */*/*/*/*/*.cpp) \
+	$(wildcard */*/*/*/*.cpp) \
+	$(wildcard */*/*/*.cpp) \
+	$(wildcard */*/*.cpp) \
+	$(wildcard */*.cpp) \
+	$(wildcard *.cpp)
+
+
+# List of names of object files:
+OBJS := $(CPP_SRCS:%.cpp=$(TARGET_PATH)/%.o) $(C_SRCS:%.c=$(TARGET_PATH)/%.o) $(A_SRCS:%.s=$(TARGET_PATH)/%.o)
+# List of names of dependency files:
+DEPS := $(OBJS:.o=.dep)
+
+# List of include paths:
+INCLUDE_PATHS := -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery  
+# Target directives:
+CPU_FLAGS := -mthumb -mcpu=cortex-m3 -mthumb-interwork
+# Optimization directives:
+OPTIMIZATION_FLAGS := -O0
+# Debug directives:
+DEBUG_FLAGS := -g3
+# Warning directives:
+WARNINGS := -Wall
+#WARNINGS := -Wall -Wimplicit -Wcast-align -Wpointer-arith -Wswitch -Wredundant-decls -Wreturn-type -Wunused
+#WARNINGS := -Wall -Wimplicit -Wcast-align -Wpointer-arith -Wredundant-decls -Wcast-qual -Wextra -Wshadow  -Wa,-adhlns=Build/syscalls.lst
+# C Directives
+C_OPTIONS := -fno-inline -fno-exceptions
+CPP_OPTIONS := $(IC_OPTIONS) -fno-rtti
+# Preprocessor defines:
+PREPROCESSOR_DEFINES := -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER
+# Compiler options compiler:
+ASM_DIRECTIVES := $(WARNINGS) $(INCLUDE_PATHS)
+C_DIRECTIVES   := $(WARNINGS) $(INCLUDE_PATHS) $(CPU_FLAGS) $(OPTIMIZATION_FLAGS) $(DEBUG_FLAGS) $(C_OPTIONS) $(PREPROCESSOR_DEFINES)
+CPP_DIRECTIVES := $(WARNINGS) $(INCLUDE_PATHS) $(CPU_FLAGS) $(OPTIMIZATION_FLAGS) $(DEBUG_FLAGS) $(CPP_OPTIONS) $(PREPROCESSOR_DEFINES)
+# Compiler flags to generate dependency files:
+#CFLAGS =
+#Linker option
+LINK_SCRIPT = "stm32_flash.ld"
+LINKER_FLAGS = -lm -mthumb -mcpu=cortex-m3  -Wl,--gc-sections -T$(LINK_SCRIPT) -static  -Wl,--start-group -lm -Wl,--end-group -Wl,-cref "-Wl,-Map=$(BIN_DIR)/test_C_makefile.map" -Wl,--defsym=malloc_getpagesize_P=0x1000
+
+
+
+#@echo Up to date now: $(shell stat -L -c %s Build/main.bin) Bytes
+all: buildbin | $(TARGET_PATH)		 
+	@echo Up to date now
+
+buildbin: buildelf
+	arm-none-eabi-objcopy -O binary Build/main.elf Build/main.bin
+	
+buildelf: $(DEPS) $(OBJS)
+	@echo ---- Linking: $(DEPS)
+	#arm-none-eabi-g++ -o "$(TARGET_PATH)/main.elf" $(OBJS) $(LINKER_FLAGS)
+	#arm-none-eabi-g++ -mthumb -O0 -mcpu=cortex-m3 -mthumb-interwork -gdwarf-2 $(PREPROCESSOR_DEFINES) $(INCLUDE_PATHS) -mlong-calls -ffunction-sections -fdata-sections -fpromote-loop-indices $(WARNINGS) -MD -MP -MF Build/dep/main.elf.d $(OBJS) --output Build/main.elf -Wl,-Map=Build/main.map,--cref,--gc-sections -lc -lm -lc -lgcc -lstdc++ -L.   -T./stm32_flash.ld
+	arm-none-eabi-g++ -o "$(TARGET_PATH)/main.elf" $(OBJS) $(LINKER_FLAGS)
+	@echo
+
+$(TARGET_PATH):
+	mkdir -p $(TARGET_PATH)
+clean:
+	rm -rf $(TARGET_PATH)
+clean_src:
+	rm -rf $(TARGET_PATH)/src
+	rm 	-f $(TARGET_PATH)/main.bin
+	rm 	-f $(TARGET_PATH)/main.bin			
+	 	
+
+#ASM DEP + COMPILE
+$(TARGET_PATH)/%.dep: %.s | $(TARGET_PATH)
+	@echo ---- Dependency ASM file : $< to $@
+	mkdir -p $(dir $@)
+	arm-none-eabi-gcc $(PREPROCESSOR_DEFINES) -MM -MG -MF $@ -MT '$@ $(addprefix $(TARGET_PATH)/,$(patsubst %.c,%.o,$<))' $(CFLAGS) $<
+	@echo		
+$(TARGET_PATH)/%.o: %.s $(TARGET_PATH)/%.dep | $(TARGET_PATH)
+	@echo ---- Compiling ASM : $< to $@
+	arm-none-eabi-gcc -c $(ASM_DIRECTIVES) -g -o $@ $<
+	@echo
+	
+#C DEP + COMPILE	
+$(TARGET_PATH)/%.dep: %.c | $(TARGET_PATH)
+	@echo ---- Dependency C file : $< to $@
+	mkdir -p $(dir $@)
+	arm-none-eabi-gcc $(PREPROCESSOR_DEFINES) -MM -MG -MF $@ -MT '$@ $(addprefix $(TARGET_PATH)/,$(patsubst %.c,%.o,$<))' $(CFLAGS) $<
+	@echo
+$(TARGET_PATH)/%.o: %.c $(TARGET_PATH)/%.dep | $(TARGET_PATH)
+	@echo ---- Compiling C : $< to $@	
+	arm-none-eabi-gcc -c -gdwarf-2 $(C_DIRECTIVES) -o $@ -c $<
+	@echo
+
+#CPP DEP + COMPILE
+$(TARGET_PATH)/%.dep: %.cpp  | $(TARGET_PATH)
+	@echo ---- Dependency CPP file : $< to $@	
+	mkdir -p $(dir $@)
+	arm-none-eabi-g++ $(PREPROCESSOR_DEFINES) -MM -MG -MF $@ -MT '$@ $(addprefix $(TARGET_PATH)/,$(patsubst %.cpp,%.o,$<))' $(CFLAGS) $<
+	@echo	
+$(TARGET_PATH)/%.o: %.cpp $(TARGET_PATH)/%.dep | $(TARGET_PATH)
+	@echo ---- Compiling CPP : $< to $@		
+	arm-none-eabi-g++ -c -gdwarf-2 $(CPP_DIRECTIVES) -o $@ -c $<
+	@echo
+	
+
+
+	
+
+
+	
+	
+	

@@ -1,0 +1,2 @@
+Build/src/main.dep Build/src/main.o: src/main.cpp stm32f10x.h \
+ STM32vldiscovery.h src/Main.h

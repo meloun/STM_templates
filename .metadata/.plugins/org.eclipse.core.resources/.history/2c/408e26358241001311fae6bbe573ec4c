@@ -1,0 +1,3 @@
+Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.dep Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.o: \
+ Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.c \
+ Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.h STM32f10x.h

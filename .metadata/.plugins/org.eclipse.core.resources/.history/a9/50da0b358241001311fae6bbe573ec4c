@@ -1,0 +1,2 @@
+Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o: \
+ Libraries/STM32F10x_StdPeriph_Driver/src/misc.c misc.h

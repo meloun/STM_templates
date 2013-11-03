@@ -1,0 +1,71 @@
+# Hey Emacs, this is a -*- makefile -*-
+
+#export PATH := "C:\_meloun\myStm32\toolchains\CodeSourcery\bin;"
+#export PATH := "C:\_meloun\myStm32\toolchains\yagarto-20121222\bin;"
+#export PATH := "C:\_meloun\myStm32\toolchains\GNU Tools ARM Embedded\4.7 2013q2\bin\;"
+
+# List of names of C files:
+C_SRCS := $(wildcard *.c)
+# List of names of C++ files:
+CPP_SRCS := $(wildcard *.cpp)
+
+# List of include paths:
+INCLUDE_PATHS := -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Core/CM3 -I./Libraries -I.
+# Target directives:
+CPU_FLAGS := -mthumb -mcpu=cortex-m3 -mthumb-interwork
+# Optimization directives:
+OPTIMIZATION_FLAGS := -O0
+# Debug directives:
+DEBUG_FLAGS := -g3
+# Warning directives:
+WARNINGS := -Wall
+#WARNINGS := -Wall -Wimplicit -Wcast-align -Wpointer-arith -Wswitch -Wredundant-decls -Wreturn-type -Wunused
+#WARNINGS := -Wall -Wimplicit -Wcast-align -Wpointer-arith -Wredundant-decls -Wcast-qual -Wextra -Wshadow  -Wa,-adhlns=Build/syscalls.lst
+# C Directives
+C_OPTIONS := -fno-inline -fno-rtti -fno-exceptions
+# Preprocessor defines:
+PREPROCESSOR_DEFINES := -DSTM32F10X_MD  -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=8000000UL
+# Compiler options for GNU C compiler:
+C_DIRECTIVES := $(WARNINGS) $(INCLUDE_PATHS) $(CPU_FLAGS) $(OPTIMIZATION_FLAGS) $(DEBUG_FLAGS) $(C_OPTIONS) $(PREPROCESSOR_DEFINES)
+# Assembler options for gcc:
+A_FLAGS :=
+
+
+
+
+all: $(C_SRCS)
+	echo H4 
+	#echo $(PATH)	
+#	arm-none-eabi-g++ --version
+	
+	#Assembling: startup_stm32f10x_md.S
+#	arm-none-eabi-g++ -c -mthumb -mcpu=cortex-m3 -mthumb-interwork -I. -x assembler-with-cpp startup_stm32f10x_md.S -o Build/startup_stm32f10x_md.o
+	
+	#Compiling C: syscalls.c
+#	arm-none-eabi-gcc -c -gdwarf-2 $(C_DIRECTIVES) -MD -MP -MF Build/dep/syscalls.o.d syscalls.c -o Build/syscalls.o	
+		
+	#---- Compiling C : Libraries/CMSIS/Core/CM3/core_cm3.c to Build/core_cm3.o
+#	arm-none-eabi-gcc -c -gdwarf-2 $(C_DIRECTIVES) -MD -MP -MF Build/dep/core_cm3.o.d Libraries/CMSIS/Core/CM3/core_cm3.c -o Build/core_cm3.o	
+	 		 	
+	#Compiling C: ./Libraries/CMSIS/Core/CM3/system_stm32f10x.c
+#	arm-none-eabi-gcc -c -gdwarf-2 $(C_DIRECTIVES) -MD -MP -MF Build/dep/system_stm32f10x.o.d Libraries/CMSIS/Core/CM3/system_stm32f10x.c -o Build/system_stm32f10x.o
+	
+	#---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/misc.c to Build/misc.o
+#	arm-none-eabi-gcc -c -gdwarf-2 $(C_DIRECTIVES) -MD -MP -MF Build/dep/misc.o.d Libraries/STM32F10x_StdPeriph_Driver/src/misc.c -o Build/misc.o
+	
+	#Compiling C++: Main.cpp
+#	arm-none-eabi-g++ -c -gdwarf-2 $(C_DIRECTIVES) -MD -MP -MF Build/dep/main.o.d main.cpp -o Build/main.o	 
+	
+	#Linking: Main.elf	
+#	arm-none-eabi-g++ -mthumb  -O0 -mcpu=cortex-m3 -mthumb-interwork -gdwarf-2 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Core/CM3 -I./Libraries -I. -mlong-calls -ffunction-sections -fdata-sections -fpromote-loop-indices -Wall -Wextra -Wimplicit -Wcast-align -Wpointer-arith -Wredundant-decls -Wshadow -Wcast-qual -Wcast-align -Wa,-adhlns=Build/startup_stm32f10x_md.lst -MD -MP -MF Build/dep/main.elf.d Build/startup_stm32f10x_md.o Build/syscalls.o Build/core_cm3.o Build/system_stm32f10x.o Build/misc.o Build/main.o --output Build/main.elf -Wl,-Map=Build/main.map,--cref,--gc-sections -lc -lm -lc -lgcc -lstdc++ -L.   -T./stm32_flash.ld
+	
+	#objcopy
+#	arm-none-eabi-objcopy -O binary Build/main.elf Build/main.bin 
+
+Build/%.o: %.c
+	echo CCC, $< -o $@
+	#$(CC) $(COMPILER_FLAGS) $< -o $@
+
+	
+	
+	

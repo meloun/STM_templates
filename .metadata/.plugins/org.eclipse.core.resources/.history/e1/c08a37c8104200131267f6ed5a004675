@@ -1,0 +1,17 @@
+/*
+ * Main.h
+ *
+ *  Created on: Sep 28, 2009
+ *      Author: fgervais
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+class Application {
+public:
+	Application();
+	virtual ~Application();
+};
+
+#endif /* MAIN_H_ */

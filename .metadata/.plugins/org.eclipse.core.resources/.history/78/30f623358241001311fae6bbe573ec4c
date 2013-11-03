@@ -1,0 +1,1 @@
+Build/src/syscalls.dep Build/src/syscalls.o: src/syscalls.c stm32f10x.h

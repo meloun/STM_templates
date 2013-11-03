@@ -1,0 +1,2 @@
+Build/src/system_stm32f10x.dep Build/src/system_stm32f10x.o: \
+ src/system_stm32f10x.c stm32f10x.h

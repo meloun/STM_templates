@@ -1,0 +1,58 @@
+/*
+ * Main.cpp
+ *
+ *  Created on: Sep 28, 2009
+ *      Author: Lubos Melichar
+ */
+
+#include <stddef.h>
+#include "stm32f10x.h"
+#include "STM32vldiscovery.h"
+#include "Main.h"
+
+
+Leds::Leds() {
+	STM32vldiscovery_LEDInit(LED3);
+	STM32vldiscovery_LEDInit(LED4);
+	STM32vldiscovery_LEDOn(LED3);
+	STM32vldiscovery_LEDOn(LED4);
+}
+Leds::~Leds() {}
+Leds::Toggle() {
+	/* Toggle LED3 */
+	STM32vldiscovery_LEDToggle(LED3);
+	/* Toggle LED4 */
+	STM32vldiscovery_LEDToggle(LED4);
+}
+
+
+int main() {
+	Application app;
+
+	STM32vldiscovery_LEDInit(LED3);
+	STM32vldiscovery_LEDInit(LED4);
+	STM32vldiscovery_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);
+	STM32vldiscovery_LEDOff(LED3);
+	STM32vldiscovery_LEDOff(LED4);
+
+	/* Infinite loop */
+	while (1){
+
+		if(0 == STM32vldiscovery_PBGetState(BUTTON_USER))
+		{
+			/* Toggle LED3 */
+			STM32vldiscovery_LEDToggle(LED3);
+			/* Turn Off LED4 */
+			STM32vldiscovery_LEDOff(LED4);
+		}
+		else
+		{
+			/* Toggle LED4 */
+			STM32vldiscovery_LEDToggle(LED4);
+			/* Turn Off LED3 */
+			STM32vldiscovery_LEDOff(LED3);
+		}
+	}
+}
+
+
