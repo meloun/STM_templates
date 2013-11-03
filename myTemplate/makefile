@@ -1,4 +1,4 @@
-# Hey Emacs, this is a -*- makefile -*-
+# Hey Emacs, this is a -*- makefile -*-f
 
 #export PATH := "C:\_meloun\myStm32\toolchains\CodeSour-cery\bin;"
 #export PATH := "C:\_meloun\myStm32\toolchains\yagarto-20121222\bin;"
