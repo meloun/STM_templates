@@ -1,0 +1,211 @@
+mkdir -p Build
+---- Dependency CPP file : src/main.cpp to Build/src/main.dep
+mkdir -p Build/src/
+arm-none-eabi-g++ -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/src/main.dep -MT 'Build/src/main.dep Build/src/main.o'  src/main.cpp
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/misc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o'  Libraries/STM32F10x_StdPeriph_Driver/src/misc.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c
+
+---- Dependency C file : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.dep
+mkdir -p Build/Libraries/STM32F10x_StdPeriph_Driver/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.dep -MT 'Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.o'  Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c
+
+---- Dependency C file : Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.c to Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.dep
+mkdir -p Build/Utilities/STM32_EVAL/STM32_Discovery/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.dep -MT 'Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.dep Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.o'  Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.c
+
+---- Dependency C file : src/stm32f10x_it.c to Build/src/stm32f10x_it.dep
+mkdir -p Build/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/src/stm32f10x_it.dep -MT 'Build/src/stm32f10x_it.dep Build/src/stm32f10x_it.o'  src/stm32f10x_it.c
+
+---- Dependency C file : src/syscalls.c to Build/src/syscalls.dep
+mkdir -p Build/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/src/syscalls.dep -MT 'Build/src/syscalls.dep Build/src/syscalls.o'  src/syscalls.c
+
+---- Dependency C file : src/system_stm32f10x.c to Build/src/system_stm32f10x.dep
+mkdir -p Build/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/src/system_stm32f10x.dep -MT 'Build/src/system_stm32f10x.dep Build/src/system_stm32f10x.o'  src/system_stm32f10x.c
+
+---- Dependency ASM file : src/startup_stm32f10x_md_vl.s to Build/src/startup_stm32f10x_md_vl.dep
+mkdir -p Build/src/
+arm-none-eabi-gcc -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -MM -MG -MF Build/src/startup_stm32f10x_md_vl.dep -MT 'Build/src/startup_stm32f10x_md_vl.dep Build/src/startup_stm32f10x_md_vl.o'  src/startup_stm32f10x_md_vl.s
+
+---- Compiling CPP : src/main.cpp to Build/src/main.o
+arm-none-eabi-g++ -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3  -fno-rtti -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/src/main.o -c src/main.cpp
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/misc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o -c Libraries/STM32F10x_StdPeriph_Driver/src/misc.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c
+
+---- Compiling C : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c to Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.o -c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c
+
+---- Compiling C : Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.c to Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.o -c Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.c
+
+---- Compiling C : src/stm32f10x_it.c to Build/src/stm32f10x_it.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/src/stm32f10x_it.o -c src/stm32f10x_it.c
+
+---- Compiling C : src/syscalls.c to Build/src/syscalls.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/src/syscalls.o -c src/syscalls.c
+
+---- Compiling C : src/system_stm32f10x.c to Build/src/system_stm32f10x.o
+arm-none-eabi-gcc -c -gdwarf-2 -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mthumb -mcpu=cortex-m3 -mthumb-interwork -O0 -g3 -fno-inline -fno-exceptions -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -o Build/src/system_stm32f10x.o -c src/system_stm32f10x.c
+
+---- Compiling ASM : src/startup_stm32f10x_md_vl.s to Build/src/startup_stm32f10x_md_vl.o
+arm-none-eabi-gcc -c -Wall -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -g -o Build/src/startup_stm32f10x_md_vl.o src/startup_stm32f10x_md_vl.s
+
+---- Linking: Build/src/main.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.dep Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.dep Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.dep Build/src/stm32f10x_it.dep Build/src/syscalls.dep Build/src/system_stm32f10x.dep Build/src/startup_stm32f10x_md_vl.dep
+#arm-none-eabi-g++ -o "Build/main.elf" Build/src/main.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.o Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.o Build/src/stm32f10x_it.o Build/src/syscalls.o Build/src/system_stm32f10x.o Build/src/startup_stm32f10x_md_vl.o -lm -mthumb -mcpu=cortex-m3  -Wl,--gc-sections -T"stm32_flash.ld" -static  -Wl,--start-group -lm -Wl,--end-group -Wl,-cref "-Wl,-Map=/test_C_makefile.map" -Wl,--defsym=malloc_getpagesize_P=0x1000
+#arm-none-eabi-g++ -mthumb -O0 -mcpu=cortex-m3 -mthumb-interwork -gdwarf-2 -DSTM32F10X_MD_VL -DUSE_STDPERIPH_DRIVER -I./Libraries/STM32F10x_StdPeriph_Driver/inc -I./Libraries/CMSIS/Device/ST/STM32F10x/Include -I./Libraries/CMSIS/Include -I./src -I./Utilities/STM32_EVAL/STM32_Discovery   -mlong-calls -ffunction-sections -fdata-sections -fpromote-loop-indices -Wall -MD -MP -MF Build/dep/main.elf.d Build/src/main.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.o Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.o Build/src/stm32f10x_it.o Build/src/syscalls.o Build/src/system_stm32f10x.o Build/src/startup_stm32f10x_md_vl.o --output Build/main.elf -Wl,-Map=Build/main.map,--cref,--gc-sections -lc -lm -lc -lgcc -lstdc++ -L.   -T./stm32_flash.ld
+arm-none-eabi-g++ -o "Build/main.elf" Build/src/main.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o Build/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.o Build/Utilities/STM32_EVAL/STM32_Discovery/STM32vldiscovery.o Build/src/stm32f10x_it.o Build/src/syscalls.o Build/src/system_stm32f10x.o Build/src/startup_stm32f10x_md_vl.o -lm -mthumb -mcpu=cortex-m3  -Wl,--gc-sections -T"stm32_flash.ld" -static  -Wl,--start-group -lm -Wl,--end-group -Wl,-cref "-Wl,-Map=/test_C_makefile.map" -Wl,--defsym=malloc_getpagesize_P=0x1000
+
+arm-none-eabi-objcopy -O binary Build/main.elf Build/main.bin
+Up to date now
