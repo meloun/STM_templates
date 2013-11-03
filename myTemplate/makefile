@@ -102,7 +102,7 @@ clean_src:
 $(TARGET_PATH)/%.dep: %.s | $(TARGET_PATH)
 	@echo ---- Dependency ASM file : $< to $@
 	mkdir -p $(dir $@)
-	arm-none-eabi-gcc $(PREPROCESSOR_DEFINES) -MM -MG -MF $@ -MT '$@ $(addprefix $(TARGET_PATH)/,$(patsubst %.c,%.o,$<))' $(CFLAGS) $<
+	arm-none-eabi-gcc $(PREPROCESSOR_DEFINES) -MM -MG -MF $@ -MT '$@ $(addprefix $(TARGET_PATH)/,$(patsubst %.s,%.o,$<))' $(CFLAGS) $<
 	@echo		
 $(TARGET_PATH)/%.o: %.s $(TARGET_PATH)/%.dep | $(TARGET_PATH)
 	@echo ---- Compiling ASM : $< to $@
